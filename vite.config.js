@@ -5,9 +5,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig(({ command }) => {
   return {
-    // 如果是開發模式 (npm run dev)，路徑用 '/'
-    // 如果是打包模式 (npm run build)，路徑用 './'
-    base: command === 'serve' ? '/' : './',
+    // 這裡直接寫死專案路徑，最不容易出錯
+    base: command === 'serve' ? '/' : '/20260429/', 
     plugins: [
       vue(),
       vueDevTools(),
